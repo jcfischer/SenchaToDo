@@ -8,7 +8,7 @@ Ext.define('TD.view.TaskList', {
        store: Ext.create('TD.store.TaskStore'),
        emptyText: '<p>Hier ist (noch) nix</p>',
        itemTpl: '<div>{title}</div>',
-       grouped: false,
+       grouped: true,
        onItemDisclosure: true,
        items: [{
            xtype: 'toolbar',

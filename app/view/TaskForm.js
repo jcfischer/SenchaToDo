@@ -1,3 +1,13 @@
+var lang = {
+    de: {
+        instructions: 'Geben Sie die Details ein'
+    },
+    en: {
+        instructions: 'Enter the details of the task'
+    }
+
+}
+
 Ext.define('TD.view.TaskForm', {
     extend:'Ext.form.Panel',
     config:{
@@ -29,7 +39,7 @@ Ext.define('TD.view.TaskForm', {
             {
                 xtype:'fieldset',
                 id:'mainFieldset',
-                instructions:'Enter the details of the task',
+                instructions: lang['de']['instructions'],
                 title:'Task Details',
                 items:[
                     {

@@ -9,6 +9,8 @@ Ext.application({
 
     stores: [ 'TaskStore' ],
 
+    controllers: ['TaskController'],
+
     views: ['TaskList', 'TaskForm'],
 
     icon: {
@@ -34,7 +36,11 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('TD.view.TaskForm'));
+
+        var list = Ext.create('TD.view.TaskList');
+        var form = Ext.create('TD.view.TaskForm');
+
+        Ext.Viewport.add([list, form]);
     },
 
     onUpdated: function() {

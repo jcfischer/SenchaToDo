@@ -12,6 +12,8 @@ Ext.define('TD.store.TaskStore', {
       model: 'TD.model.Task',
       autoLoad: true,
       autoSync: true,
+      groupField: 'dueDate',
+      groupDir: 'DESC',
 
       sorters: [
           {
